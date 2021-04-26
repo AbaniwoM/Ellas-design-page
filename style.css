@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/dog_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #204238;
+    padding: 10px;
+    height: 80px;
+}
+
+header .logo {
+    font-family: poppins;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding-left: 110px;
+}
+
+#myTopnav {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 120px;
+    color: #FFFFFF;
+    font-family: poppins;
+    font-size: 30px;
+}
+
+.text {
+    font-size: 16px;
+}
+
+.main h2 {
+    font-size: 25px;
+}
+
+.learn button {
+    border-radius: 30px;
+    font-size: 13px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+
+.navigation {
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.navigation a {
+    padding-right: 50px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: poppins;
+}
+
+.navigation .button {
+    border-radius: 40px;
+    font-size: 13px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: poppins;
+    font-weight: 900;
+}
+
+/*responsiveness*/
+@media screen and (max-width: 768px) {
+    body {
+        background-position: top;
+        background-size: cover;
+        padding-bottom: 80px;
+        overflow: hidden;
+    }
+
+    main {
+        font-size: 30px;
+        margin-top: 120px;
+        margin-left: 30px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    #myTopnav {
+        display: block;
+    }
+
+    /* Makes Hamburger Heading Visible On Mobile Only */
+    .topnav .icon, #myTopnav, .active {
+        visibility: visible;
+        z-index: 10000;
+    }
+
+    /* Width Of Hamburger Navigation */
+    .topnav {
+        width: 100%;
+    }
+
+    /* Removes Desktop Heading & Navigation */
+    .nav, .top-heading {
+        display: none;
+    }
+
+    /* Header Color */
+    #fn {
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    /* Background And Overflow Of Hamburger Navigation */
+    .topnav {
+        background-color: #204238;
+        overflow: hidden;
+    }
+
+    /* Link Style Inside Hamburger Navigation */
+    .topnav a {
+       float: left;
+       display: block;
+       color: #ffffff;
+       text-align: center;
+       padding: 26px 16px;
+       text-decoration: none;
+       font-family: 'Alegreya Sans SC', sans-serif;
+       font-size: 28px;
+    }
+
+    /* Link Properties On Hover */
+    .topnav a:hover {
+       color: black;
+    }
+
+    /* Active Highlight Of Current Page */
+    .active {
+       color: #ffffff;
+    }
+
+    /* Closed Hamburger Properties */
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+       float: right;
+       display: block;
+    }
+
+    /* Open Hamburger Properties */
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+       position: absolute;
+       font-size: 25px;
+       right: 0%;
+       top: 0;
+    }
+
+    /* Open Link Properties */
+    .topnav.responsive a {
+       float: none;
+       display: block;
+       text-align: left;
+       font-size: 15px;
+    }
+}
